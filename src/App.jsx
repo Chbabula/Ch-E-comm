@@ -1,35 +1,32 @@
 import React from 'react'
 import Home from './pages/Home'
-import Search  from './pages/Search'
-import ProductDetailes from './pages/ProductDetailes'
-
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
+import ProductDetailes from './pages/ProductDetailes'
+import Search  from './pages/Contact'
+import './App.css'
+
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-      header
-      {/* <br />
-      <a href='/'>Home</a>
-      <br />
-      <a href='/About'>About</a>
-      <br />
-      <a href='/Contact'>Contact</a> */}
-
-      <Link to="/">Home</Link>
-      &nbsp;
-      <Link to="/search">Search</Link>
-      
-
+      <nav>
+          <Link to="/" className='brand'>
+            <img src="https://1000logos.net/wp-content/uploads/2016/10/Batman-Logo-1939.png" alt="" />
+          </Link>
+          <Link to="/">Home</Link>
+          <Link to="/contact">Contact</Link>
+        </nav>
 
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/search' element={<Search/>}/>
-        <Route path='/productdetailes/:productId' element={<ProductDetailes/>}/>
+        <Route path='/productdetails/:productId' element={<ProductDetailes/>}/>
         
       </Routes>
-      footer
+        <footer>
+          This made by babula
+        </footer>
       </BrowserRouter>
 
       
